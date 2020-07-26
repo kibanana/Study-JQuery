@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>jQuery 라이브러리 연결</title>
+        <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("p:contains('html')").css('border', 'solid 4px red');
+                $("p:empty").css('border', 'solid 4px orange');
+                $("p:empty").height("20");
+                $("p:empty").width("20");
+                $("span:parent").css('border', 'solid 4px yellow');
+                $("section:has(article)").css('border', 'solid 4px green');
+            });
+        </script>
+
+        <style>
+           * {
+               margin: 5px;
+           }
+
+           span {
+               display: inline-block;
+           }
+
+           span, p, div {
+               height: 20px;
+           }
+        </style>
+    </head>
+    <body>
+        <p>html, css, javascript</p>
+        <p>html5와 웹표준</p>
+
+        <p>
+            
+        </p>
+
+        <span>
+            <a>
+            내용1
+            </a>
+        </span>
+
+        <section><article>내용2_1</article></section>
+        <section><article>내용2_1</article></section>
+    </body>
+</html>

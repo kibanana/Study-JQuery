@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>jQuery 라이브러리 연결</title>
+        <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    
+        <script>
+            $("div#site a").attr("href", function(index,h){
+                return attribute("_self"); //속성 반환
+            });
+
+            ("div#site a").text(function(index, t) {
+                return t+' mobile';
+            });
+
+            $("div#site >a:eq(0)").attr("href", "http://m.naver.com").text("다음 모바일");
+        </script>
+    </head>
+    
+    <body>
+        <div id="site">
+            <a href="http://naver.com" target="_blank">네이버</a>
+            <a href="http://daum.net" target="_blank">다음</a>
+            <a href="http://nate.com" target="_blank">네이트</a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>jQuery 라이브러리 연결</title>
+        <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+        <script>
+
+            $(document).ready(function(){
+                $("div#m1").text("responsive web")
+                
+                $("div#m2 div").text(function(index, t) {
+                    //index는 0,1,2
+                    //t는 내용
+                    return 'div 요소의 텍스트는 ' + t + ", index는 " + index;
+                });
+
+            });
+
+        </script>
+    </head>
+    <body>
+        <div id="m1">
+            <div>jQuery</div>
+        </div>
+
+        <div id="m2">
+            <div>html</div>
+            <div>css</div>
+            <div>javascript</div>
+        </div>
+    </body>
+</html>

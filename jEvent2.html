@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>jQuery 라이브러리 연결</title>
+        <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    
+        <style>
+            .bg {
+                padding: 40px;
+                margin-bottom: 40px;
+                background: #ccc;
+            }
+            .inner {
+                padding: 20px;
+                background: #999;
+            }
+        </style>
+
+        <script>
+            $(docuemnt).ready(function() {
+                $(".wrap1").mouseover(function(){
+                    $(".display").append("<strong>마우스오버</strong>");
+                });
+
+                $(".wrap2").mouseenter(function(){
+                    $(".display").append("<strong>마우스엔터</strong>");
+                });
+            });
+        </script>
+    </head>
+    
+    <body>
+        <div class="wrap1 bg">
+            <div class="inner">mouseover</div>    
+        </div>
+        <div class="wrap2 bg">
+            <div class="inner">mouseenter</div>    
+        </div>
+        <div class="display"></div>
+    </body>
+</html>

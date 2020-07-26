@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>jQuery 라이브러리 연결</title>
+        <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    
+        <style>
+            body {
+                font-size: 12px;
+            }
+
+        </style>
+
+        <script>
+            $(document).ready(function() {
+               $("input").focus(function(){
+                    $("input").css("background", "orange");
+               });
+
+               $("input").blur(function(){
+                    $("input").css("background", "white");
+               });
+
+               $("div").click(function(){
+                    $(this).width($(this).width*1.5);
+                    $(this).height($(this).height*1.5);
+               });
+
+               $("img").toggle(
+                    function(){
+                    $(this).css("display", "none");
+                    },
+                    function(){
+                    $(this).css("display", "block");
+                    }
+               );
+            });
+        </script>
+    </head>
+    
+    <body>
+        focus/blur 이벤트 <br>
+        <input type="text" name="text1" value="입력하세요"> <br>
+        <br><br>
+        click 이벤트<br>
+        <div style="border: 2px solid darkgreen; width: 50px; height: 50px;"></div><br>
+        <br><br>
+        toggle 이벤트<br>
+        <img src="img.jpg"><br>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>jQuery 라이브러리 연결</title>
+        <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+        
+        <script>
+
+            $(document).ready(function(){
+                $("div#t1").html("<em>html</em>");
+                $("div[id!=t1]").html(function(index, h){
+                    return "<strong>"+h+"</strong>";
+                });
+
+            });
+
+        </script>
+
+    </head>
+    <body>
+        <div id="t1"><strong>jQuery</strong></div>
+        <div id="t2">
+            <div>html</div>
+            <div>css</div>
+            <div>javascript</div>
+        </div>
+    </body>
+</html>
